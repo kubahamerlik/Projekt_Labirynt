@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdlib.h>
 
-#define MAX_LINE_LENGTH
+#define MAX_LINE_LENGTH 2049
 
-void readSquareFromFile(const char filename, int start_line, int end_line, int start_char, int num_chars) {
-    FILEfile = fopen(filename, "r");
+void readSquareFromFile(const char *fileName, int start_line, int end_line, int start_char, int num_chars) {
+    FILE *file = fopen( fileName, "r");
     if (file == NULL) {
         printf("Unable to open file.\n");
         return;
