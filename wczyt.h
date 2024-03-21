@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void wczyt(const char *filename, int *n, int *m);
+void wczyt( char *filename, int *n, int *m);
+
+
 
 #endif //UNTITLED4_WCZYT_H
