@@ -143,6 +143,10 @@ int wczyt(char *nazwapliku, int *n, int *m)
 
 
 
+
+
+
+
             for(int k=0;k<10;k++)free(temp[i]);  //zwalnianie pamieci
             free(temp);
 
