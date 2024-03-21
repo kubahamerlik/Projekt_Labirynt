@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     int n = 0;
     int m = 0;
 
-    int num_files = 1000;
+    int num_files = 110;
 
     FILE *temp_files[num_files];
 
