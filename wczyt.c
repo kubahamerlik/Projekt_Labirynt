@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void wczyt(char *nazwapliku, FILE *tempFile, int *n, int *m)
+void wczyt(char *nazwapliku, FILE **tempFile, int rozmiar_tmpfile, int *n, int *m)
 {
     FILE *file = fopen(nazwapliku, "r");
     if(file==NULL) {
@@ -140,11 +140,20 @@ void wczyt(char *nazwapliku, FILE *tempFile, int *n, int *m)
 
             ///ZAPISYWANIE DO PLIKU TRZEBA TUTAJ WSTAWIĆ
 
-            for(int i = 0 ; i < 10; i++){
-                for(int j = 0; j < 1024; j++){
-                    fprintf( tempFile, "%d", temp[i][j]);
+            int indeks = 0; //indeksowanie tablicy plikow tymczasowych tempFile[]
+
+            for(int p = 0 ; p < 10; p++){
+                for(int q = 0; q < 1024; q++){
+                    fprintf( tempFile[indeks], "%d", temp[p][q]);
                 }
-                fprintf(tempFile, "\n");
+                fprintf(tempFile[indeks], "\n");
+            }
+
+            indeks++;
+
+            if(indeks == rozmiar_tmpfile){
+                fprintf(stderr, "Za mało plików tymczasowych!");
+                exit(1);
             }
 
 

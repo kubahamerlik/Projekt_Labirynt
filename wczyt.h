@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int wczyt( char *filename, FILE *tempfile, int *n, int *m);
+int wczyt( char *filename, FILE **tempfile, int roz_tmp, int *n, int *m);
 
 
 

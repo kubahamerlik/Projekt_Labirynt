@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     int n = 0;
     int m = 0;
 
-    int num_files = 100;
+    int num_files = 1000;
 
     FILE *temp_files[num_files];
 
@@ -24,7 +24,9 @@ int main(int argc, char* argv[])
             exit(1);
         }
     }
-    wczyt(argv[1], temp_files[2], &n, &m);
+
+
+    wczyt(argv[1], temp_files, num_files, &n, &m);
 
     printf("%d , %d",n,m);
 
