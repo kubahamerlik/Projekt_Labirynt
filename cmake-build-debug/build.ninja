@@ -49,14 +49,14 @@ cmake_ninja_workdir = C$:/Users/jakub/Documents/GitHub/Projekt_Labirynt/cmake-bu
 
 build cmake_object_order_depends_target_Projekt_Labirynt: phony || CMakeFiles/Projekt_Labirynt.dir
 
-build CMakeFiles/Projekt_Labirynt.dir/czytanieZPliku.c.obj: C_COMPILER__Projekt_Labirynt_unscanned_Debug C$:/Users/jakub/Documents/GitHub/Projekt_Labirynt/czytanieZPliku.c || cmake_object_order_depends_target_Projekt_Labirynt
-  DEP_FILE = CMakeFiles\Projekt_Labirynt.dir\czytanieZPliku.c.obj.d
+build CMakeFiles/Projekt_Labirynt.dir/wczyt.c.obj: C_COMPILER__Projekt_Labirynt_unscanned_Debug C$:/Users/jakub/Documents/GitHub/Projekt_Labirynt/wczyt.c || cmake_object_order_depends_target_Projekt_Labirynt
+  DEP_FILE = CMakeFiles\Projekt_Labirynt.dir\wczyt.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Projekt_Labirynt.dir
   OBJECT_FILE_DIR = CMakeFiles\Projekt_Labirynt.dir
 
-build CMakeFiles/Projekt_Labirynt.dir/wczyt.c.obj: C_COMPILER__Projekt_Labirynt_unscanned_Debug C$:/Users/jakub/Documents/GitHub/Projekt_Labirynt/wczyt.c || cmake_object_order_depends_target_Projekt_Labirynt
-  DEP_FILE = CMakeFiles\Projekt_Labirynt.dir\wczyt.c.obj.d
+build CMakeFiles/Projekt_Labirynt.dir/main.c.obj: C_COMPILER__Projekt_Labirynt_unscanned_Debug C$:/Users/jakub/Documents/GitHub/Projekt_Labirynt/main.c || cmake_object_order_depends_target_Projekt_Labirynt
+  DEP_FILE = CMakeFiles\Projekt_Labirynt.dir\main.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Projekt_Labirynt.dir
   OBJECT_FILE_DIR = CMakeFiles\Projekt_Labirynt.dir
@@ -69,7 +69,7 @@ build CMakeFiles/Projekt_Labirynt.dir/wczyt.c.obj: C_COMPILER__Projekt_Labirynt_
 #############################################
 # Link the executable Projekt_Labirynt.exe
 
-build Projekt_Labirynt.exe: C_EXECUTABLE_LINKER__Projekt_Labirynt_Debug CMakeFiles/Projekt_Labirynt.dir/czytanieZPliku.c.obj CMakeFiles/Projekt_Labirynt.dir/wczyt.c.obj
+build Projekt_Labirynt.exe: C_EXECUTABLE_LINKER__Projekt_Labirynt_Debug CMakeFiles/Projekt_Labirynt.dir/wczyt.c.obj CMakeFiles/Projekt_Labirynt.dir/main.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Projekt_Labirynt.dir

@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(Projekt_Labirynt
         wczyt.h
-        wczyt.c)
+        wczyt.c
+        main.c)

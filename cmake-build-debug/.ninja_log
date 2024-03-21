@@ -1,7 +1,7 @@
 # ninja log v5
 1	582	7324718945931102	CMakeFiles/Projekt_Labirynt.dir/czytanieZPliku.c.obj	8c8a386b0290a973
-585	1069	7324718950734507	Projekt_Labirynt.exe	cbdab62758714759
-3	117	7324741488952083	CMakeFiles/Projekt_Labirynt.dir/wczyt.c.obj	8c489ee3e145c0af
-118	268	7324741490369370	Projekt_Labirynt.exe	8d392f75bd35853f
-3	1164	7327446311977911	CMakeFiles/Projekt_Labirynt.dir/wczyt.c.obj	8c489ee3e145c0af
 1165	1810	7327446318320253	Projekt_Labirynt.exe	8d392f75bd35853f
+3	1164	7327446311977911	CMakeFiles/Projekt_Labirynt.dir/wczyt.c.obj	8c489ee3e145c0af
+15	326	7327490987945855	CMakeFiles/Projekt_Labirynt.dir/main.c.obj	933a3c6769691015
+4	333	7327490988005806	CMakeFiles/Projekt_Labirynt.dir/wczyt.c.obj	8c489ee3e145c0af
+333	751	7327490992065159	Projekt_Labirynt.exe	2b3b6a3cd641aa75
