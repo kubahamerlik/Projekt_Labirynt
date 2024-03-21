@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int wczyt(char *nazwapliku, int *n, int *m)
+void wczyt(char *nazwapliku, FILE *tempFile, int *n, int *m)
 {
     FILE *file = fopen(nazwapliku, "r");
     if(file==NULL) {
@@ -42,7 +42,7 @@ int wczyt(char *nazwapliku, int *n, int *m)
     if (tab == NULL) //err
     {
         perror("Błąd alokacji pamięci dla wskaźników na wiersze");
-        return 1;
+        exit(1);
     }
     for (int i = 0; i < 3; i++)
     {
@@ -53,7 +53,7 @@ int wczyt(char *nazwapliku, int *n, int *m)
                 free(tab[j]);
             }
             free(tab);
-            return 1;
+            exit(1);
         }
     }
 
@@ -72,7 +72,7 @@ int wczyt(char *nazwapliku, int *n, int *m)
     char **temp = (char **)calloc(10, sizeof(char *)); //alokowanie pamieci dla temp
     if (temp == NULL) { //err
         perror("Błąd alokacji pamięci dla wskaźników na wiersze");
-        return 1;
+        exit(1);
     }
     for (int i = 0; i < 10; i++) {
         temp[i] = (char *)calloc(1024, sizeof(char));
@@ -82,7 +82,7 @@ int wczyt(char *nazwapliku, int *n, int *m)
                 free(temp[j]);
             }
             free(temp);
-            return 1;
+            exit(1);
         }
     }
 
@@ -140,6 +140,13 @@ int wczyt(char *nazwapliku, int *n, int *m)
 
             ///ZAPISYWANIE DO PLIKU TRZEBA TUTAJ WSTAWIĆ
 
+            for(int i = 0 ; i < 10; i++){
+                for(int j = 0; j < 1024; j++){
+                    fprintf( tempFile, "%d", temp[i][j]);
+                }
+                fprintf(tempFile, "\n");
+            }
+
 
 
 
@@ -153,7 +160,7 @@ int wczyt(char *nazwapliku, int *n, int *m)
             char **temp = (char **)calloc(10, sizeof(char *)); //alokowanie pamieci dla temp
             if (temp == NULL) { //err
                 perror("Błąd alokacji pamięci dla wskaźników na wiersze");
-                return 1;
+                exit(1);
             }
             for (int i = 0; i < 10; i++) {
                 temp[i] = (char *)calloc(1024, sizeof(char));
@@ -163,7 +170,7 @@ int wczyt(char *nazwapliku, int *n, int *m)
                         free(temp[j]);
                     }
                     free(temp);
-                    return 1;
+                    exit(1);
                 }
             }
         }
